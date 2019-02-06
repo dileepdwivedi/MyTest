@@ -45,4 +45,19 @@
 			</snapshots>
 		</repository>
 	</repositories>
+	
+<distributionManagement>
+    <repository>
+        <id>123</id>
+        <name>Maven project</name>
+        <url>http://ec2-54-246-145-191.eu-west-1.compute.amazonaws.com/nexus/content/repositories/123</url>
+    </repository>
+    
+    <snapshotRepository>
+        <id>123</id>
+        <name>Maven project</name>
+        <url>http://ec2-54-246-145-191.eu-west-1.compute.amazonaws.com/nexus/content/repositories/123</url>
+    </snapshotRepository>
+
+</distributionManagement>
 </project>
