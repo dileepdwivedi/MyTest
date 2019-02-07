@@ -65,13 +65,13 @@
     <repository>
         <id>release</id>
         <name>Release</name>
-        <url>http://ec2-54-246-145-191.eu-west-1.compute.amazonaws.com/nexus/content/repositories/releases</url>
+        <url>http://ec2-34-245-46-39.eu-west-1.compute.amazonaws.com/nexus/content/repositories/releases</url>
     </repository>
     
     <snapshotRepository>
         <id>snapshots</id>
         <name>Snapshots</name>
-        <url>http://ec2-54-246-145-191.eu-west-1.compute.amazonaws.com/nexus/content/repositories/snapshots</url>
+        <url>http://ec2-34-245-46-39.eu-west-1.compute.amazonaws.com/nexus/content/repositories/snapshots</url>
     </snapshotRepository>
 
 </distributionManagement>
