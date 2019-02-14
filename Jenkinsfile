@@ -27,3 +27,4 @@ node {
         server.publishBuildInfo buildInfo
     }
 }
+}
