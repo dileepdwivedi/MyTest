@@ -7,7 +7,7 @@ pipeline {
                 echo 'Building..'
     rtMavenRun (
     // Tool name from Jenkins configuration.
-    tool: MAVEN_TOOL,
+    tool: apache-maven-3.6.0,
     pom: '/var/lib/jenkins/workspace/FirstPipeline/pom.xml',
     goals: 'clean install',
                )
