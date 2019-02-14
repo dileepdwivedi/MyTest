@@ -1,7 +1,13 @@
 node {
     // Get Artifactory server instance, defined in the Artifactory Plugin administration page.
-    def server = Artifactory.server "63.32.170.64"
+    //def server = Artifactory.server "63.32.170.64"
     // Create an Artifactory Maven instance.
+    rtServer (
+    id: "Artifactory",
+    url: "http://ec2-34-243-73-14.eu-west-1.compute.amazonaws.com:8080/",
+    username: "Bee",
+    password: "London@12345"
+)
     def rtMaven = Artifactory.newMavenBuild()
     def buildInfo
     
