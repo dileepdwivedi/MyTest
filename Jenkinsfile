@@ -9,7 +9,6 @@ environment {
                 echo 'Building..'
     rtMavenRun (
     // Tool name from Jenkins configuration.
-    tool: MAVEN_TOOL,
     pom: '/var/lib/jenkins/workspace/FirstPipeline/pom.xml',
     goals: 'clean install',
                )
