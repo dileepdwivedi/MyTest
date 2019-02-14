@@ -1,11 +1,11 @@
-pipeline {
-    agent any
 node {
     // Get Artifactory server instance, defined in the Artifactory Plugin administration page.
     def server = Artifactory.server "63.32.170.64"
     // Create an Artifactory Maven instance.
     def rtMaven = Artifactory.newMavenBuild()
     def buildInfo
+    
+    stages {
 
     stage('Clone sources') {
         git url: 'https://github.com/dileepdwivedi/MyTest'
@@ -26,5 +26,6 @@ node {
     stage('Publish build info') {
         server.publishBuildInfo buildInfo
     }
+}
 }
 }
