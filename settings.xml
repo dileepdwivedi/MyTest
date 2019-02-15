@@ -15,7 +15,7 @@
       <repositories>
           <repository>
               <id>localnexus3</id>
-              <url>http://localhost/nexus/content/repositories/releases</url>
+              <url>http://localhost/nexus/content/repositories/snapshots</url>
           </repository>
       </repositories>
     </profile>
