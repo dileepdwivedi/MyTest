@@ -9,12 +9,13 @@ node{
         maven: 'Maven',
         // Maven settings.xml file defined with the Jenkins Config File Provider Plugin
         // Maven settings and global settings can also be defined in Jenkins Global Tools Configuration
-        mavenSettingsConfig: '/opt/apache-maven-3.6.0/',
-        mavenLocalRepo: '.repository'
+        //mavenSettingsConfig: '/opt/apache-maven-3.6.0/',
+        //mavenLocalRepo: '.repository'
     ) {
  
       // Run the maven build
-      sh "mvn clean package"
+      //sh "mvn clean package"
+      sh "mvn clean install -s mvn-settings.xml"
  
     } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe & FindBugs reports...
   }
