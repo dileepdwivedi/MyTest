@@ -6,7 +6,7 @@ node{
  
     withMaven(
         // Maven installation declared in the Jenkins "Global Tool Configuration"
-        maven: '/opt/apache-maven-3.6.0',
+        maven: 'maven-3.6.0',
         // Maven settings.xml file defined with the Jenkins Config File Provider Plugin
         // Maven settings and global settings can also be defined in Jenkins Global Tools Configuration
        // mavenSettingsConfig: '/opt/apache-maven-3.6.0/',
