@@ -15,7 +15,7 @@ node{
  
       // Run the maven build
       //sh "mvn clean package"
-      sh "mvn clean install -s settings.xml"
+      sh "mvn clean install deploy -s settings.xml"
  
     } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe & FindBugs reports...
   }
