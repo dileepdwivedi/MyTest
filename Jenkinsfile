@@ -9,7 +9,7 @@ node{
         maven: 'M3',
         // Maven settings.xml file defined with the Jenkins Config File Provider Plugin
         // Maven settings and global settings can also be defined in Jenkins Global Tools Configuration
-        mavenSettingsConfig: '/home/ec2-user/.m2/repository/',
+        mavenSettingsConfig: '.m2/repository/',
         mavenLocalRepo: '.repository') {
  
       // Run the maven build
