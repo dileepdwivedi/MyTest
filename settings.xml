@@ -15,7 +15,7 @@
       <repositories>
           <repository>
               <id>localnexus3</id>
-              <url>http://localhost/nexus/content/repositories/snapshots</url>
+              <url>http://ec2-34-242-183-198.eu-west-1.compute.amazonaws.com/nexus/content/repositories/snapshots</url>
           </repository>
       </repositories>
     </profile>
