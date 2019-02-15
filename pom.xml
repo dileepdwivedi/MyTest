@@ -42,13 +42,13 @@
     <repository>
         <id>release</id>
         <name>Release</name>
-        <url>http://localhost/nexus/content/repositories/releases</url>
+        <url>http://ec2-34-242-183-198.eu-west-1.compute.amazonaws.com/nexus/content/repositories/releases</url>
     </repository>
     
     <snapshotRepository>
         <id>snapshots</id>
         <name>Snapshots</name>
-        <url>http://localhost/nexus/content/repositories/snapshots</url>
+        <url>http://ec2-34-242-183-198.eu-west-1.compute.amazonaws.com/nexus/content/repositories/snapshots</url>
     </snapshotRepository>
 
 </distributionManagement>
