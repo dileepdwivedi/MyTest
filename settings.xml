@@ -4,7 +4,7 @@
 <pluginGroup>org.grails</pluginGroup></pluginGroups>
   <servers>
     <server>
-      <id>localnexus3</id>
+      <id>root</id>
       <username>admin</username>
       <password>admin@123</password>
     </server>
@@ -14,8 +14,8 @@
       <id>default</id>
       <repositories>
           <repository>
-              <id>localnexus3</id>
-              <url>http://localhost/nexus/content/repositories/releases</url>
+              <id>root</id>
+              <url>http://localhost/nexus/content/repositories/snapshots</url>
           </repository>
       </repositories>
     </profile>
