@@ -22,9 +22,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-               // sh "scp /var/lib/jenkins/workspace/FirstPipeline/target/helloworld-1.0-SNAPSHOT.jar ubuntu@172.31.16.191:/home/ubuntu/test/"
-                //sh "ssh -v ubuntu@172.31.16.191"
-                sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.16.191"
+               // sh "scp /var/lib/jenkins/workspace/FirstPipeline/target/helloworld-1.0-SNAPSHOT.jar ubuntu@172.31.21.219:/home/ubuntu/test/"
+                //sh "ssh -v ubuntu@1172.31.21.219"
+                sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.21.219"
                 echo "ssh done successfully"
             }
         }
