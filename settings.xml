@@ -15,7 +15,7 @@
       <repositories>
           <repository>
               <id>root</id>
-              <url>http://ec2-34-243-160-5.eu-west-1.compute.amazonaws.com/nexus/content/repositories/test</url>
+              <url>http://ec2-34-243-53-169.eu-west-1.compute.amazonaws.com/nexus/content/repositories/test</url>
           </repository>
       </repositories>
     </profile>
