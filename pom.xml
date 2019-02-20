@@ -34,13 +34,13 @@
     </dependencies>
 <distributionManagement>
     <repository>
-        <id>release</id>
+        <id>root</id>
         <name>Release</name>
         <url>http://ec2-34-243-53-169.eu-west-1.compute.amazonaws.com/nexus/content/repositories/releases</url>
     </repository>
    
     <snapshotRepository>
-        <id>snapshots</id>
+        <id>root</id>
         <name>Snapshots</name>
         <url>http://ec2-34-243-53-169.eu-west-1.compute.amazonaws.com/nexus/content/repositories/snapshots</url>
     </snapshotRepository>
