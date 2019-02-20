@@ -5,6 +5,11 @@ pipeline {
         stage('Build') {
             steps {
                     git url: 'https://github.com/dileepdwivedi/MyTest'
+                
+                withMaven(
+                    maven: 'Maven',
+                         )
+                
                     sh "mvn clean package deploy -s settings.xml"
             }
         }
