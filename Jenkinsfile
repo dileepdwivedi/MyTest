@@ -8,9 +8,10 @@ pipeline {
                 
                 withMaven(
                     maven: 'Maven',
-                         )
+                ){
                 
                     sh "mvn clean package deploy -s settings.xml"
+                }
             }
         }
         stage('Test') {
