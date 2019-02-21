@@ -25,8 +25,8 @@ pipeline {
                // sh "scp /var/lib/jenkins/workspace/FirstPipeline/target/helloworld-1.0-SNAPSHOT.jar ec2-user@172.31.21.219:/home/ubuntu/test/"
                 //sh "ssh -v ec2-user@172.31.21.219"
                 //sh "ssh -v ubuntu@172.31.16.191"
-                sh "wget --user=admin --password=admin@123 http://ec2-18-202-18-242.eu-west-1.compute.amazonaws.com/nexus/content/repositories/snapshots/com/mycompany/helloworld/1.0-SNAPSHOT/helloworld-1.0-20190220.041803-1.jar -O /var/lib/jenkins/workspace/FirstPipeline/dileep.jar"
-                sh "scp /var/lib/jenkins/workspace/FirstPipeline/dileep.jar ec2-user@172.31.21.219:/home/ec2-user/"
+                sh "wget --user=admin --password=admin@123 http://ec2-18-202-18-242.eu-west-1.compute.amazonaws.com/nexus/content/repositories/snapshots/com/mycompany/helloworld/1.0-SNAPSHOT/helloworld-1.0-20190220.041803-1.jar -O ${WORKSPACE}/dileep.jar"
+                sh "scp ${WORKSPACE}/dileep.jar ec2-user@172.31.21.219:/home/ec2-user/"
                 echo "ssh done successfully"
             }
         }
