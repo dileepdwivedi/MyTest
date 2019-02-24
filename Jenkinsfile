@@ -7,7 +7,7 @@ pipeline {
                     git url: 'https://github.com/dileepdwivedi/MyTest'
                 
                 withMaven(
-                    maven: 'Maven',
+                    maven: '/opt/maven',
                 ){
                 
                     sh "mvn clean package deploy -s settings.xml"
