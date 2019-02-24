@@ -15,7 +15,7 @@
       <repositories>
           <repository>
               <id>root</id>
-              <url>http://localhost/nexus/content/repositories/test</url>
+              <url>http://localhost:8081/nexus/content/repositories/</url>
           </repository>
       </repositories>
     </profile>
