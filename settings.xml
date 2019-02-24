@@ -6,7 +6,7 @@
     <server>
       <id>root</id>
       <username>admin</username>
-      <password>admin@123</password>
+      <password>admin123</password>
     </server>
   </servers>
   <profiles>
