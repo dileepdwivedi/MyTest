@@ -23,7 +23,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 //sh "ssh -v ec2-user@172.31.21.219"
-                sh "wget --user=admin --password=admin123 http://ec2-18-202-175-202.eu-west-1.compute.amazonaws.com:8081/repository/maven-snapshots/com/mycompany/helloworld/1.0-SNAPSHOT/helloworld-1.0-20190220.041803-1.jar -O ${WORKSPACE}/dileep.jar"
+                sh "wget --user=admin --password=admin123 http://localhost:8081/repository/maven-snapshots/com/mycompany/helloworld/1.0-SNAPSHOT/helloworld-1.0-20190226.121515-2.jar -O ${WORKSPACE}/dileep.jar"
                 sh "scp ${WORKSPACE}/dileep.jar ec2-user@172.31.21.219:/home/ec2-user/"
                 //sh "ansible -m ping all"
                 echo "Ansible successfully"
