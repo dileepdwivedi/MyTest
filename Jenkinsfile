@@ -42,12 +42,10 @@ pipeline {
              
             steps {
                  
-              dir('/home/ubuntu/')
-              {
-               
+             
                sh 'ansible all -m ping'
                
-            }
+            
             }
         }
     }
