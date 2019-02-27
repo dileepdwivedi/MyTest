@@ -37,16 +37,6 @@ pipeline {
                 
             }
         }
-        
-        stage('Ansible Deploy') {
-             
-            steps {
-                 
-             
-               sh 'ansible all -m ping'
-               
-            
-            }
-        }
+      
     }
 }
