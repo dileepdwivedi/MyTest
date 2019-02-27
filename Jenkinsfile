@@ -19,7 +19,7 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Deploy') {
+        stage('Ansible init') {
             steps {
                 echo 'Deploying....'
                 //sh "ssh -v ec2-user@172.31.21.219"
@@ -31,10 +31,23 @@ pipeline {
                 env.PATH = "${tfHome}:${env.PATH}"
                    sh 'ansible --version'
                  //sh "ansible -m ping all"
-                 echo "Ansible successfully"
+                 echo "Ansible init successfully"
                     
             }
                 
+            }
+        }
+        
+        stage('Ansible Deploy') {
+             
+            steps {
+                 
+              dir('/home/ubuntu/.ssh')
+              {
+               
+               sh 'ansible all -m ping -i hosts'
+               
+            }
             }
         }
     }
