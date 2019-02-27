@@ -29,8 +29,8 @@ pipeline {
                 
                def tfHome = tool name: 'Ansible'
                 env.PATH = "${tfHome}:${env.PATH}"
-                   sh 'ansible --version'
-                 //sh "ansible -m ping all"
+                  sh 'ansible --version'
+                 sh "ansible -m ping all"
                  echo "Ansible init successfully"
                     
             }
