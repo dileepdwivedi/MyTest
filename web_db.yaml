@@ -9,22 +9,13 @@
 
   - name: Start Apache Service
     service: name=httpd enabled=yes state=started
-
-
+ 
+  - name: Copy zar File
+    template: src=dileep.zar dest=/home/ec2-user/dileep.zar
+  
 - hosts: dbservers
   sudo: yes
 
   tasks:
-  - name: Ensure MySql installed
-    yum: name=mysql-server state=present
-    when: ansible_os_family == "RedHat"
-
-  - name: Start MySql
-    service: name=mysqld state=started
-
-- hosts: webservers:dbservers
-  sudo: yes
-
-  tasks:
-  - name: Stop IPTABLES NOW
-    service: name=iptables state=stopped
+  - name: Copy zar File
+    template: src=dileep.zar dest=/home/ec2-user/dileep.zar
