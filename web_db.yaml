@@ -11,11 +11,15 @@
     service: name=httpd enabled=yes state=started
  
   - name: Copy zar File
-    template: src=dileep.zar dest=/home/ec2-user/dileep.zar
+      -copy:
+          src=dileep.zar
+          dest=/home/ec2-user/dileep.zar
   
 - hosts: dbservers
   sudo: yes
 
   tasks:
   - name: Copy zar File
-    template: src=dileep.zar dest=/home/ec2-user/dileep.zar
+      -copy:
+          src=dileep.zar
+          dest=/home/ec2-user/dileep.zar
