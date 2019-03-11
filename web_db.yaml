@@ -12,8 +12,8 @@
  
   - name: Copy zar File
     copy:
-      src=/var/lib/jenkins/workspace/Pipeline/dileep.zar
-      dest=/home/ec2-user/dileep.zar
+      src=dileep.jar
+      dest=/home/ec2-user/dileep.jar
       remote_src=yes
   
 - hosts: dbservers
@@ -22,7 +22,7 @@
   tasks:
   - name: Copy zar File
     copy:
-      src=/var/lib/jenkins/workspace/Pipeline/dileep.zar
-      dest=/home/ec2-user/dileep.zar
+      src=dileep.jar
+      dest=/home/ec2-user/dileep.jar
       remote_src=yes
       
