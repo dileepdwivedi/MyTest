@@ -12,7 +12,7 @@
  
   - name: Copy zar File
     copy:
-      src=dileep.zar
+      src=/var/lib/jenkins/workspace/Pipeline/dileep.zar
       dest=/home/ec2-user/dileep.zar
       remote_src=yes
   
@@ -22,7 +22,7 @@
   tasks:
   - name: Copy zar File
     copy:
-      src=dileep.zar
+      src=/var/lib/jenkins/workspace/Pipeline/dileep.zar
       dest=/home/ec2-user/dileep.zar
       remote_src=yes
       
