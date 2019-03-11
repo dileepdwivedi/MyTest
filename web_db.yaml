@@ -13,8 +13,9 @@
   - name: Copy zar File
     copy:
       src=dileep.zar
-      dest=/home/ec2-user/dileep.zar
       remote_src: yes
+      dest=/home/ec2-user/dileep.zar
+      
   
 - hosts: dbservers
   sudo: yes
@@ -23,5 +24,6 @@
   - name: Copy zar File
     copy:
       src=dileep.zar
-      dest=/home/ec2-user/dileep.zar
       remote_src: yes
+      dest=/home/ec2-user/dileep.zar
+      
