@@ -14,6 +14,7 @@
     copy:
       src=dileep.zar
       dest=/home/ec2-user/dileep.zar
+      remote_src: yes
   
 - hosts: dbservers
   sudo: yes
@@ -23,3 +24,4 @@
     copy:
       src=dileep.zar
       dest=/home/ec2-user/dileep.zar
+      remote_src: yes
