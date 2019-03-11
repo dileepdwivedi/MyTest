@@ -11,7 +11,7 @@
     service: name=httpd enabled=yes state=started
  
   - name: Copy zar File
-      -copy:
+      copy:
           src=dileep.zar
           dest=/home/ec2-user/dileep.zar
   
@@ -20,6 +20,6 @@
 
   tasks:
   - name: Copy zar File
-      -copy:
+      copy:
           src=dileep.zar
           dest=/home/ec2-user/dileep.zar
