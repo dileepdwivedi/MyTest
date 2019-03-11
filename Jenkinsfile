@@ -33,7 +33,7 @@ pipeline {
                 //sh "ansible -m ping all"
                 //sh "wget --user=admin --password=admin123  http://localhost:8081/repository/maven-snapshots/com/mycompany/helloworld/1.0-SNAPSHOT/helloworld-1.0-20190227.071039-15.jar -O ${WORKSPACE}/dileep.jar"
                 //sh "scp ${WORKSPACE}/dileep.jar ec2-user@172.31.21.219:/home/ec2-user/"
-                  sh "ansible-playbook test.yml"
+                  sh "ansible-playbook test.yml --limit Start MySql"
                  echo "Ansible init successfully"
                     
             }
