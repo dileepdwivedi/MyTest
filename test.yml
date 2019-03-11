@@ -17,9 +17,3 @@
   - name: Ensure MySql installed
     yum: name=mysql-server state=present
     
-- hosts: webservers:dbservers
-  sudo: yes
-
-  tasks:
-  - name: Stop IPTABLES NOW
-    service: name=iptables state=stopped
