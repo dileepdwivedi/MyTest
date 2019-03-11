@@ -17,9 +17,6 @@
   - name: Ensure MySql installed
     yum: name=mysql-server state=present
     
-  - name: Start MySql
-    service: name=mysqld state=started
-
 - hosts: webservers:dbservers
   sudo: yes
 
