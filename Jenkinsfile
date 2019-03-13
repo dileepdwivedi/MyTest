@@ -36,6 +36,11 @@ pipeline {
                   sh "ansible-playbook web_db.yaml"
                  echo "Ansible deplyed successfully"
                     
+       withCredentials([usernamePassword(credentialsId: 'git-pass-credentials-ID', passwordVariable: 'London@123#123', usernameVariable: 'dileepdwivedi')]) {
+    sh("git tag -a some_tag -m 'Jenkins'")
+    sh('git push https://${dileepdwivedi}:${London@123#123}@https://github.com/dileepdwivedi/MyTest --tags')
+}
+                    
             }
                 
             }
