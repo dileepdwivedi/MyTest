@@ -1,30 +1,23 @@
-#
-# Nginx Dockerfile
-#
-# https://github.com/dockerfile/nginx
-#
+FROM openjdk:8-jre
 
-# Pull base image.
-FROM dockerfile/ubuntu
-
-# Install Nginx.
+# Install google-chrome and xvfb
 RUN \
-  add-apt-repository -y ppa:nginx/stable && \
-  apt-get update && \
-  apt-get install -y nginx && \
-  rm -rf /var/lib/apt/lists/* && \
-  echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
-  chown -R www-data:www-data /var/lib/nginx
+  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
+  echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list && \
+  apt-get -y update && \
+  apt-get install -y google-chrome-stable unzip xvfb libxi6 libgconf-2-4 && \
+  rm -rf /var/lib/apt/lists/*
 
-# Define mountable directories.
-VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
+# Install ChromeDriver
 
-# Define working directory.
-WORKDIR /etc/nginx
+RUN \
+  wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip && \
+  unzip chromedriver_linux64.zip && \
+  mv chromedriver /usr/bin/chromedriver && \
+  rm -rf chromedriver_linux64.zip && \
+  chown root:root /usr/bin/chromedriver  && \
+  chmod +x /usr/bin/chromedriver
 
-# Define default command.
-CMD ["nginx"]
+ENV CHROME_BIN /usr/bin/google-chrome
 
-# Expose ports.
-EXPOSE 80
-EXPOSE 443
+CMD ["bin/bash"]
