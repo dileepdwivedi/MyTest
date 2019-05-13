@@ -36,10 +36,23 @@ pipeline {
                   //sh "ansible-playbook web_db.yaml"
                  //echo "Ansible deplyed successfully"
                     
-       withCredentials([usernamePassword(credentialsId: 'git-pass-credentials-ID', passwordVariable: 'London@123#123', usernameVariable: 'dileepdwivedi')]) {
-    sh("git tag -a some_tag -m 'Jenkins'")
-    sh('git push https://${dileepdwivedi}:${London@123#123}@https://github.com/dileepdwivedi/MyTest --tags')
-}
+      // withCredentials([usernamePassword(credentialsId: 'git-pass-credentials-ID', passwordVariable: 'London@123#123', usernameVariable: 'dileepdwivedi')]) {
+    //sh("git tag -a some_tag -m 'Jenkins'")
+    //sh('git push https://${dileepdwivedi}:${London@123#123}@https://github.com/dileepdwivedi/MyTest --tags')
+//}
+                    
+                    
+    stage('Pull from Dockerhub'){
+	   sh "docker login -u dileepkumar123 -p London@123"
+	   sh "docker pull dileepkumar123/docker-exmp"
+	}
+   
+   
+    stage('Deploy to Dev Environment'){
+       def dockerRun = 'docker run -d -p 8080:8012 --name docker-exmp dileepkumar123/docker-exmp:latest'
+       sshagent(['docker-dev']) {
+       sh "ssh -o StrictHostKeyChecking=no ec2-user@172.31.21.4 ${dockerRun}"
+   }
                     
             }
                 
