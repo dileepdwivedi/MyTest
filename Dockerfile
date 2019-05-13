@@ -21,3 +21,5 @@ RUN \
 ENV CHROME_BIN /usr/bin/google-chrome
 
 CMD ["bin/bash"]
+
+EXPOSE 8012 8013
