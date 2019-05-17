@@ -42,7 +42,7 @@ pipeline {
 //}
                     
         stage('installing Docker'){
-	   sh "ssh -o StrictHostKeyChecking=no ec2-user@172.31.21.4"
+	   sh "ssh -vv -i /home/ec2-user/.ssh ec2-user@172.31.21.4"
 	   sh "sudo yum update -y"
 	   sh "sudo yum install docker -y"
 	   sh "sudo service docker start"
