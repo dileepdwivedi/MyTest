@@ -52,6 +52,7 @@ pipeline {
        def dockerRun = 'docker run -d -p 8080:8012 --name docker-exmp dileepkumar123/docker-exmp:latest'
        sshagent(['docker-dev']) {
        sh "ssh -o StrictHostKeyChecking=no ec2-user@172.31.21.4 ${dockerRun}"
+	       echo 'Docker Image deployed successfully....'
    }
                     
             }
