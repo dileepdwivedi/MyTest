@@ -41,14 +41,7 @@ pipeline {
     //sh('git push https://${dileepdwivedi}:${London@123#123}@https://github.com/dileepdwivedi/MyTest --tags')
 //}
                     
-        stage('installing Docker'){
-	   sh "ssh -vv -i ec2-user@172.31.21.4"
-	   sh "sudo yum update -y"
-	   sh "sudo yum install docker -y"
-	   sh "sudo service docker start"
-	}
-			
-			
+
     stage('Pull from Dockerhub'){
 	   sh "docker login -u dileepkumar123 -p London@123"
 	  sh "docker pull dileepkumar123/docker-exmp"
