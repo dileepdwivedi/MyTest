@@ -42,10 +42,10 @@ pipeline {
 //}
                     
                     
-    stage('Pull from Dockerhub'){
-	   sh "docker login -u dileepkumar123 -p London@123"
-	   sh "docker pull dileepkumar123/docker-exmp"
-	}
+    //stage('Pull from Dockerhub'){
+	//   sh "docker login -u dileepkumar123 -p London@123"
+	//  sh "docker pull dileepkumar123/docker-exmp"
+	//}
    
    
     stage('Deploy to Dev Environment'){
