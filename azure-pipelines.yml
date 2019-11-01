@@ -19,7 +19,6 @@ steps:
   displayName: 'Run a multi-line script'
 
 - task: CopyFiles@2
-  inputs:
   SourceFolder: 'https://github.com/dileepdwivedi/MyTest'
   Contents: '*.yml*'
   TargetFolder: '\\10.127.15.232\C\Workspace\Test'
